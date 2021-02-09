@@ -1,5 +1,6 @@
 package Test;
 
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import AppBase.DriverFactory;
@@ -14,10 +15,11 @@ public class SampleTest {
 		factory.startBrowser("chrome");
 		SeleniumHelper helper = new SeleniumHelper();
 		
-		helper.goToUrl("http://www.go2faire.com/")
-		.refreshPage()
-		.sleep(3)
-		.quitBrowser();
+		helper	.goToUrl("http://www.go2faire.com/");
+		WebElement login = helper.findElement("//span[contains(text(),'Login')]");	
+		helper.getWebElement(login).click();
+		helper.sleep(3).quitBrowser();
+	
 		
 	}
 	
