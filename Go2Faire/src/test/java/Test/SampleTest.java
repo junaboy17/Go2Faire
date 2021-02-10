@@ -1,24 +1,21 @@
 package Test;
 
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import AppBase.DriverFactory;
-import AppBase.SeleniumHelper;
+import AppBase.ObjectSource;
 
 public class SampleTest {
 
 	@Test
 	public void sample() {
 		
-		DriverFactory factory = new DriverFactory();
-		factory.startBrowser("chrome");
-		SeleniumHelper helper = new SeleniumHelper();
+		ObjectSource source = new ObjectSource();
 		
-		helper	.goToUrl("http://www.go2faire.com/");
-		WebElement login = helper.findElement("//span[contains(text(),'Login')]");	
-		helper.getWebElement(login).click();
-		helper.sleep(3).quitBrowser();
+		source.getDriverFactory().startBrowser("chrome");
+		
+		source.getSeleniumHelper().goToUrl("http://www.go2faire.com/");
+		source.getStartUpPage().clickLogIn();
+		source.getSeleniumHelper().sleep(3).quitBrowser();
 	
 		
 	}
