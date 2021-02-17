@@ -3,10 +3,6 @@ package AppBase;
 import PageFactory.StartUpPage;
 
 public class ObjectSource {
-
-	public DriverFactory DriverFactor;
-	public SeleniumHelper SeleniumHelper;
-	public StartUpPage StartUpPage;
 	
 	public DriverFactory getDriverFactory() {
 		return new DriverFactory();
