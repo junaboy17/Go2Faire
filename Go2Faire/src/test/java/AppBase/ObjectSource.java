@@ -1,5 +1,6 @@
 package AppBase;
 
+import PageFactory.SignUpPage;
 import PageFactory.StartUpPage;
 
 public class ObjectSource {
@@ -14,6 +15,10 @@ public class ObjectSource {
 	
 	public StartUpPage getStartUpPage() {
 		return new StartUpPage(DriverFactory.getDriver());
+	}
+	
+	public SignUpPage getSignUpPage() {
+		return new SignUpPage(DriverFactory.getDriver());
 	}
 	
 }

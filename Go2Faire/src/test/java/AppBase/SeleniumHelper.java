@@ -179,6 +179,15 @@ public class SeleniumHelper {
 		}
 		return null;
 	}
+	
+	//Enter keys into text box
+	public SeleniumHelper enterKeys(String value, WebElement element, String... clear) {
+		if(clear.length>0) {
+			getWebElement(element).clear();
+		}
+		getWebElement(element).sendKeys(value);
+		return this;
+	}
 
 
 }

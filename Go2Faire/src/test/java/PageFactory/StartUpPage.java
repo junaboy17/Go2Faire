@@ -20,9 +20,17 @@ public class StartUpPage {
 	@FindBy(xpath= "//span[contains(text(),'Login')]")
 	public WebElement logInBtn;
 	
+	@FindBy(xpath= "//button[@id='jqSignup']")
+	public WebElement signUpBtn;
+	
 	
 	public StartUpPage clickLogIn() {
 		helper.getWebElement(logInBtn).click();
 		return this;
+	}
+	
+	public SignUpPage clickSignUp() {
+		helper.getWebElement(signUpBtn).click();
+		return new SignUpPage(DriverFactory.getDriver());
 	}
 }
