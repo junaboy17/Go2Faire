@@ -23,6 +23,15 @@ public class StartUpPage {
 	@FindBy(xpath= "//button[@id='jqSignup']")
 	public WebElement signUpBtn;
 	
+	@FindBy(xpath= "//input[@id='username']")
+	public WebElement usernametextbox;
+	
+	@FindBy(xpath = "//input[@id='password']")
+	public WebElement passwordtextbox;
+	
+	@FindBy(xpath = "//button[@id='jqLogin']")
+	public WebElement redlogin;
+
 	
 	public StartUpPage clickLogIn() {
 		helper.getWebElement(logInBtn).click();
@@ -32,5 +41,20 @@ public class StartUpPage {
 	public SignUpPage clickSignUp() {
 		helper.getWebElement(signUpBtn).click();
 		return new SignUpPage(DriverFactory.getDriver());
+	}
+	
+	public StartUpPage enterUsername() {
+		helper.enterKeys("yellow", usernametextbox);
+		return this;
+	}
+	
+	public StartUpPage enterPassword() {
+		helper.enterKeys("Green1@", passwordtextbox);
+		return this;
+	}
+	
+	public StartUpPage clickRedLogin() {
+		helper.getWebElement(redlogin).click();
+		return this;
 	}
 }
