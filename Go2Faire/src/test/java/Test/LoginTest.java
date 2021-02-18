@@ -15,6 +15,15 @@ public class LoginTest {
 		source.getStartUpPage().enterUsername();
 		source.getStartUpPage().enterPassword();
 		source.getStartUpPage().clickRedLogin();
+		source.getSeleniumHelper().quitBrowser();
+	}
+		
+			
+		
+	
+		
+		
+		
 		
 		
 
