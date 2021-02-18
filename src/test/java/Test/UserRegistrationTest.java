@@ -20,5 +20,6 @@ public class UserRegistrationTest extends StartUpPageHook{
 						.readTitle();
 		assertEquals(actual, expected);
 		
+		
 	}
 }
