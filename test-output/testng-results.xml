@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18529" started-at="2021-02-17T21:50:57 EST" finished-at="2021-02-17T21:51:15 EST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18529" started-at="2021-02-17T21:50:57 EST" finished-at="2021-02-17T21:51:15 EST">
+      <class name="Test.UserRegistrationTest">
+        <test-method status="PASS" signature="testSetUp(org.testng.ITestResult)[pri:0, instance:Test.UserRegistrationTest@4d41cee]" name="testSetUp" is-config="true" duration-ms="6165" started-at="2021-02-17T21:50:57 EST" finished-at="2021-02-17T21:51:03 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name={null} status=CREATED method=UserRegistrationTest.RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@4d41cee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@4d41cee]" name="RegistrationTitleCheck" duration-ms="9455" started-at="2021-02-17T21:51:03 EST" finished-at="2021-02-17T21:51:12 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationTitleCheck -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test.UserRegistrationTest@4d41cee]" name="tearDown" is-config="true" duration-ms="2820" started-at="2021-02-17T21:51:12 EST" finished-at="2021-02-17T21:51:15 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationTitleCheck status=SUCCESS method=UserRegistrationTest.RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@4d41cee] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test.UserRegistrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
