@@ -4,6 +4,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import AppBase.DataSource;
 import AppBase.ObjectSource;
 
 public class StartUpPageHook {
@@ -15,8 +16,8 @@ public class StartUpPageHook {
 	@BeforeMethod
 	public void testSetUp(ITestResult result) {
 		System.out.println("Starting Test :" + result.getMethod().getMethodName());
-		source.getDriverFactory().startBrowser("chrome");
-		source.getSeleniumHelper().goToUrl("http://www.go2faire.com/");
+		source.getDriverFactory().startBrowser(DataSource.browser.baseBrowser);
+		source.getSeleniumHelper().goToUrl(DataSource.Url.baseUrl);
 	}
 	
 	@AfterMethod

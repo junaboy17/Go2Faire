@@ -151,18 +151,27 @@ public class SeleniumHelper {
 
 	//Highlight Element
 	public WebElement highLightElement(WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].style.border='3px solid red'", element);
-		sleep(1);
-		return element;
+		if(DataSource.cofig.highlight.equalsIgnoreCase("yes")) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].style.border='3px solid red'", element);
+			sleep(1);
+			return element;
+		}else {
+			return element;
+		}
+
 	}
 
 	//Un-Highlight Element
 	public WebElement unHighLightElement(WebElement element) {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].style.border='0px solid white'", element);
-		sleep(1);
-		return element;
+		if(DataSource.cofig.unhighlight.equalsIgnoreCase("yes")) {
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].style.border='0px solid white'", element);
+			sleep(1);
+			return element;
+		}else {
+			return element;
+		}
 	}
 
 
@@ -177,6 +186,9 @@ public class SeleniumHelper {
 					highLightElement(element);
 					unHighLightElement(element);
 					return element;
+				}else {
+					System.out.println("Unable to find element in attempt " + (attempts + 1));
+					attempts++;
 				}
 			}catch(ElementNotVisibleException e) {
 				waitForLoad();
@@ -197,20 +209,24 @@ public class SeleniumHelper {
 
 	//Take Screenshot
 	public void takeScreenShot(String testStep) {
-		String name = testStep + " " + dateOnly() + ".png";
-		
-		File SourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		try {
-			File localDirectory = new File(new File("build"), "Screenshots");
-			if(!localDirectory.exists() || !localDirectory.isDirectory()) {
-				localDirectory.mkdir();
+		if(DataSource.cofig.takeScreenshot.equalsIgnoreCase("yes")) {
+			String name = testStep + " " + dateOnly() + ".png";
+
+			File SourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				File localDirectory = new File(new File("build"), "Screenshots");
+				if(!localDirectory.exists() || !localDirectory.isDirectory()) {
+					localDirectory.mkdir();
+				}
+
+				File screenShot = new File(localDirectory, name);
+				Files.copy(SourceFile, screenShot);
+			}catch(IOException e) {
+				System.out.println("Screenshot capture failed");
 			}
-			
-			File screenShot = new File(localDirectory, name);
-			Files.copy(SourceFile, screenShot);
-		}catch(IOException e) {
-			System.out.println("Screenshot capture failed");
-		}
+		}else {
+
+		}	
 	}
 
 
