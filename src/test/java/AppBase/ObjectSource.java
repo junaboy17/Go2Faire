@@ -6,7 +6,7 @@ import PageFactory.StartUpPage;
 public class ObjectSource {
 	
 	public DriverFactory getDriverFactory() {
-		return new DriverFactory();
+		return DriverFactory.getDriverFactoryInstance();
 	}
 	
 	public SeleniumHelper getSeleniumHelper() {

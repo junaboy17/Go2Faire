@@ -13,6 +13,14 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 
+	private DriverFactory() {
+		
+	}
+	
+	public static DriverFactory getDriverFactoryInstance() {
+		return new DriverFactory();
+	}
+	
 	private static WebDriver driver;
 
 	public static WebDriver getDriver() {
@@ -27,7 +35,7 @@ public class DriverFactory {
 			options.addArguments("--disable-notifications");
 			System.setProperty("webdriver.chrome.silentOutput", "true");
 			driver = new ChromeDriver(options);
-			System.out.println("----------------------------Openning Up Chrome Browser-------------------------");
+			SeleniumHelper.log.info("----------------------------Openning Up Chrome Browser-------------------------");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			driver.get("https://www.google.com/");
@@ -44,7 +52,7 @@ public class DriverFactory {
 		}
 		
 		else {
-			System.out.println("Incorrect driver.  Please choose a proper driver. Ex. Chrome, Firefox, IE");
+			SeleniumHelper.log.error("Incorrect driver.  Please choose a proper driver. Ex. Chrome, Firefox, IE");
 		}
 		
 	}

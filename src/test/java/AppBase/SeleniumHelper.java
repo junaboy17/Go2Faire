@@ -6,6 +6,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,11 +18,13 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+
 import com.google.common.io.Files;
 
 public class SeleniumHelper {
 	//Instantiating this class driver with driver from Driver factory so the instance of the driver is always the same
 	WebDriver driver = DriverFactory.getDriver();
+	public static Logger log = Logger.getLogger("Selenium");
 
 	//Will sleep for given amount of sec
 	public SeleniumHelper sleep(int sec) {
@@ -93,6 +96,14 @@ public class SeleniumHelper {
 	//Will give current date
 	public String dateOnly() {
 		DateFormat format = new SimpleDateFormat("MM-dd-yyy");
+		Date date = new Date();
+		String date1= format.format(date);
+		return date1;
+	}
+
+	//Will give current date
+	public String dateTimeFileFormat() {
+		DateFormat format = new SimpleDateFormat("MM-dd-yyy HH.mm.ss");
 		Date date = new Date();
 		String date1= format.format(date);
 		return date1;

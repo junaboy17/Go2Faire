@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sample">
+
+	<listeners>
+		<listener class-name="AppBase.TestListeners"></listener>
+	</listeners>
+
+	<test name="Regression">
+		<classes>
+			<class name= "Test.UserRegistrationTest" />
+		</classes>
+	
+	</test>
+
+</suite>

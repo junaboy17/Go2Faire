@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="18205" started-at="2021-02-22T22:17:00 EST" finished-at="2021-02-22T22:17:18 EST">
+  <suite name="Sample" duration-ms="16241" started-at="2021-02-23T22:15:55 EST" finished-at="2021-02-23T22:16:12 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="18205" started-at="2021-02-22T22:17:00 EST" finished-at="2021-02-22T22:17:18 EST">
+    <test name="Regression" duration-ms="16241" started-at="2021-02-23T22:15:55 EST" finished-at="2021-02-23T22:16:12 EST">
       <class name="Test.UserRegistrationTest">
-        <test-method status="PASS" signature="testSetUp(org.testng.ITestResult)[pri:0, instance:Test.UserRegistrationTest@646d64ab]" name="testSetUp" is-config="true" duration-ms="6021" started-at="2021-02-22T22:17:00 EST" finished-at="2021-02-22T22:17:06 EST">
+        <test-method status="PASS" signature="testSetUp(org.testng.ITestResult)[pri:0, instance:Test.UserRegistrationTest@35083305]" name="testSetUp" is-config="true" duration-ms="4631" started-at="2021-02-23T22:15:55 EST" finished-at="2021-02-23T22:16:00 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=UserRegistrationTest.RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@646d64ab] output={null}]]]>
+                <![CDATA[[TestResult name={null} status=CREATED method=UserRegistrationTest.RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@35083305] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetUp -->
-        <test-method status="PASS" signature="RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@646d64ab]" name="RegistrationTitleCheck" duration-ms="9284" started-at="2021-02-22T22:17:06 EST" finished-at="2021-02-22T22:17:15 EST">
+        <test-method status="PASS" signature="RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@35083305]" name="RegistrationTitleCheck" duration-ms="8880" started-at="2021-02-23T22:16:00 EST" finished-at="2021-02-23T22:16:09 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RegistrationTitleCheck -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test.UserRegistrationTest@646d64ab]" name="tearDown" is-config="true" duration-ms="2835" started-at="2021-02-22T22:17:15 EST" finished-at="2021-02-22T22:17:18 EST">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test.UserRegistrationTest@35083305]" name="tearDown" is-config="true" duration-ms="2691" started-at="2021-02-23T22:16:09 EST" finished-at="2021-02-23T22:16:12 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=RegistrationTitleCheck status=SUCCESS method=UserRegistrationTest.RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@646d64ab] output={null}]]]>
+                <![CDATA[[TestResult name=RegistrationTitleCheck status=SUCCESS method=UserRegistrationTest.RegistrationTitleCheck()[pri:0, instance:Test.UserRegistrationTest@35083305] output={null}]]]>
               </value>
             </param>
           </params>
@@ -34,6 +34,6 @@
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Test.UserRegistrationTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Regression -->
+  </suite> <!-- Sample -->
 </testng-results>
