@@ -23,9 +23,9 @@ public class StartUpPageHook {
 	
 	@AfterMethod
 	public void tearDown(ITestResult result) {
-		if(!result.isSuccess()) {
-			source.getSeleniumHelper().takeScreenShot(result.getMethod().getMethodName());
-		}
+//		if(!result.isSuccess()) {
+//			source.getSeleniumHelper().takeScreenShot(result.getMethod().getMethodName());
+//		}
 		source.getSeleniumHelper().sleep(2).quitBrowser();
 	}
 	

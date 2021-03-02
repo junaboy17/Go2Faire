@@ -11,7 +11,7 @@ public class DataSource {
 	}
 	
 	public static class cofig{
-		public static String takeScreenshot = "no";
+		public static String takeScreenshot = "yes";
 		public static String highlight = "yes";
 		public static String unhighlight = "yes";
 	}

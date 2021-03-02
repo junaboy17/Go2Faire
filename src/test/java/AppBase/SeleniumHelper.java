@@ -219,10 +219,10 @@ public class SeleniumHelper {
 	}
 
 	//Take Screenshot
-	public void takeScreenShot(String testStep) {
+	public String takeScreenShot(String testStep) {
+		String name = null;
 		if(DataSource.cofig.takeScreenshot.equalsIgnoreCase("yes")) {
-			String name = testStep + " " + dateOnly() + ".png";
-
+			name = testStep + " " + dateOnly() + ".png";
 			File SourceFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			try {
 				File localDirectory = new File(new File("build"), "Screenshots");
@@ -236,8 +236,10 @@ public class SeleniumHelper {
 				System.out.println("Screenshot capture failed");
 			}
 		}else {
-
-		}	
+			
+		}
+		
+		return name;
 	}
 
 
