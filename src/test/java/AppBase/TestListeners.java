@@ -1,5 +1,7 @@
 package AppBase;
 
+import java.util.Arrays;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -42,9 +44,12 @@ public class TestListeners implements ITestListener{
 			Markup m = MarkupHelper.createLabel(logText, ExtentColor.RED);
 			extentTest.get().log(Status.FAIL, m);
 			
+			StackTraceElement[] s = result.getThrowable().getStackTrace();
+			String stackMessage = Arrays.toString(result.getThrowable().getStackTrace());
 			String exceptionMessage = result.getThrowable().getLocalizedMessage();
-			extentTest.get().fail("<details><summary><b> <font color = red> Exception occured:" 
-									+ "<details><summary><b>" + exceptionMessage.replace(",", "<br>") + "</details> \n");
+			extentTest.get().fail("<details><summary><b> <font color = red> Exception occured, See Below:" 
+									+ "<details><summary><b>" + exceptionMessage.replace(",", "<br>") + "</details> \n" 
+									+ "<details><summary><b>" + stackMessage.replace(",", "<br>") + "</details> \n");
 			
 			try {
 				screenShotName = source.getSeleniumHelper().takeScreenShot(methodName);

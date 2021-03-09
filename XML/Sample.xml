@@ -7,9 +7,10 @@
 
 	<test name="Regression">
 		<classes>
-			<class name= "Test.UserRegistrationTest" />
+<!-- 			<class name= "Test.UserRegistrationTest" /> -->
+			<class name= "Test.SampleTest" />
 		</classes>
-	
+
 	</test>
 
 </suite>
