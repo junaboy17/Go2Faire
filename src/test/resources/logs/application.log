@@ -1,3 +1,1 @@
-2021-03-01 22:25:45,211 - Selenium -INFO - Starting Test :RegistrationTitleCheck3
-2021-03-01 22:25:48,501 - Selenium -INFO - ----------------------------Openning Up Chrome Browser-------------------------
-2021-03-01 22:25:52,170 - Selenium -INFO - Verifying registration page title
+2021-03-08 22:05:00,653 - Selenium -ERROR - Error. Unable to take screenshot for the case: sample
